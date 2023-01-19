@@ -1,0 +1,1 @@
+<form action="{{ route('createUser') }}" method="post"></form>
