@@ -14,7 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('chairs', function (Blueprint $table) {
-            $table->id();
+            $table->id()->unique()->autoIncrement();
+            $table->foreignId('user_id');
+            $table->string('name');
+            $table->double('amount', 8, 2);
+            $table->longText('body');
+            $table->string('image');
             $table->timestamps();
         });
     }

@@ -18,7 +18,7 @@ use App\Http\Controllers\ChairController;
 
 
 Route::group(['middleware' => ['guest']], function() {
-    Route::get('/login', [UserController::class, 'login']);
+    Route::get('/login', [UserController::class, 'login'])->name('login');
     Route::post('/users/authenticate', [UserController::class, 'authenticate'])->name('loginUser');
 
     Route::get('/register', [UserController::class, 'register']);
@@ -27,7 +27,17 @@ Route::group(['middleware' => ['guest']], function() {
 
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/', [ChairController::class, 'index']);
+
     Route::get('/chair/{slug}', [ChairController::class, 'show']);
+
+    // Route::get('/chair/create', [ChairController::class, 'createForm']);
     Route::post('/createChair', [ChairController::class, 'createChair'])->name('createChair');
+
+    Route::get('/chair/update', [ChairController::class, 'updateForm']);
+    Route::post('/updateChair', [ChairController::class, 'updateChair'])->name('updateChair');
+
+    Route::post('/chair/delete', [ChairController::class, 'deleteChair']);
+
     Route::post('/logout',  [UserController::class, 'logout']);
+
 });

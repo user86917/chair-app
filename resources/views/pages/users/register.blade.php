@@ -1,5 +1,6 @@
 @extends('layout')
 @section('main')
     
-    @include('components.loginform')
+    @include('components.registerform')
+    <p>Already have an account? <a href="/login">Login here</a></p>
 @endsection

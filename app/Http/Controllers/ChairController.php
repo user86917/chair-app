@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Chair;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ChairController extends Controller
 {
@@ -14,7 +15,7 @@ class ChairController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.chairs.index');
     }
 
     /**
@@ -22,9 +23,9 @@ class ChairController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function createForm()
     {
-        //
+        return view('pages.users.login');
     }
 
     /**
@@ -33,9 +34,23 @@ class ChairController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function createChair(Request $request)
     {
-        //
+        $user_data = $request->validate([
+            'user_id' => 'required',
+            'name' => 'required',
+            'amount' => 'required',
+            'body' => 'required',
+            'image' => 'required',
+        ]);
+
+        if(Chair::create($user_data)) {
+            return redirect('/')->with('message', 'Chair has been created');
+        }
+        else {
+            return redirect('/')->with('message', 'Chair was not created');
+        }
+        
     }
 
     /**
@@ -44,9 +59,10 @@ class ChairController extends Controller
      * @param  \App\Models\Chair  $chair
      * @return \Illuminate\Http\Response
      */
-    public function show(Chair $chair)
+    public function show($id)
     {
-        //
+        $chair = Chair::find($id);
+        return view('pages.chairs.show')->with(compact('chair'));
     }
 
     /**
