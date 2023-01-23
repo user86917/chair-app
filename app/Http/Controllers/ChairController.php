@@ -25,7 +25,7 @@ class ChairController extends Controller
      */
     public function createForm()
     {
-        return view('pages.users.login');
+        return view('pages.chairs.create');
     }
 
     /**
@@ -71,9 +71,10 @@ class ChairController extends Controller
      * @param  \App\Models\Chair  $chair
      * @return \Illuminate\Http\Response
      */
-    public function edit(Chair $chair)
+    public function edit($id)
     {
-        //
+        $chair = Chair::find($id);
+        return view('pages.chairs.update')->with(compact('chair'));
     }
 
     /**
@@ -83,9 +84,23 @@ class ChairController extends Controller
      * @param  \App\Models\Chair  $chair
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Chair $chair)
+    public function update(Request $request, $id)
     {
-        //
+        $user_data = $request->validate([
+            'post_id' => 'required',
+            'user_id' => 'required',
+            'name' => 'required',
+            'amount' => 'required',
+            'body' => 'required',
+            'image' => 'required',
+        ]);
+
+        if(Chair::where('id', $user_data["post_id"])->update(['name'=> $user_data["name"], 'amount'=> $user_data["amount"], 'body'=> $user_data["body"]])) {
+            return redirect('/')->with('message', 'Chair has been updated');
+        }
+        else {
+            return redirect('/')->with('message', 'Chair was not updated');
+        }
     }
 
     /**
@@ -94,8 +109,13 @@ class ChairController extends Controller
      * @param  \App\Models\Chair  $chair
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Chair $chair)
+    public function destroy(Request $request)
     {
-        //
+        $request->validate([
+            'id' => 'required'
+        ]);
+        $id = $request["id"];
+        Chair::where('id', $id)->delete();
+        return redirect('/');
     }
 }

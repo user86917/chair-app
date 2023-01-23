@@ -7,5 +7,5 @@
 
     <input type="password" name="password" placeholder="Password"><br>
 
-    <input type="submit" value="Login"><br>
+    <input type="submit" value="Register"><br>
 </form>

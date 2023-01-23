@@ -37,18 +37,18 @@ class UserController extends Controller
                 if(auth()->login($user)) {
                     $request->session()->regenerate();
                     
-                    return redirect('/')->with('message', 'You are now logged in');
+                    return redirect()->back()->with('message', 'You are now logged in');
                 }
                 else {
-                    return redirect('/')->with('message', 'Email or password incorrect');
+                    return redirect()->back()->with('message', 'Email or password incorrect');
                 }
             }
             else {
-                return redirect('/')->with('message', 'Password incorrect');
+                return redirect()->back()->with('message', 'Password incorrect');
             }
         }
         else {
-            return redirect('/')->with('message', "User doesn't exist");
+            return redirect()->back()->with('message', "User doesn't exist");
         }
         
     }
@@ -70,19 +70,23 @@ class UserController extends Controller
      */    
     public function createUser(Request $request) {
         $user_data = $request->validate([
-            'username' => 'required',
-            'email' => 'required|email',
+            'username' => 'required|unique:users|min:3',
+            'email' => 'required|email|unique:users',
             'password' => 'required|min:8'
         ]);
-
-        $user_data["password"] = password_hash($user_data["password"], PASSWORD_DEFAULT);
 
         if(auth()->login(User::create($user_data))) {
             $request->session()->regenerate();
             return redirect('/')->with('message', 'You are now logged in');
         }
         else {
-            return redirect('/register')->with('message', 'loggin failed');
+            return redirect()->back()->with('message', "User couldn't be created");
         }
+    }
+
+    public function logout(Request $request) {
+        auth()->logout();
+        $request->session()->regenerate();
+        return redirect('/login');
     }
 }

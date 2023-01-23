@@ -30,7 +30,7 @@ Route::group(['middleware' => ['auth']], function() {
 
     Route::get('/chair/{slug}', [ChairController::class, 'show']);
 
-    // Route::get('/chair/create', [ChairController::class, 'createForm']);
+    Route::get('/chair/create', [ChairController::class, 'createForm']);
     Route::post('/createChair', [ChairController::class, 'createChair'])->name('createChair');
 
     Route::get('/chair/update', [ChairController::class, 'updateForm']);
@@ -38,6 +38,6 @@ Route::group(['middleware' => ['auth']], function() {
 
     Route::post('/chair/delete', [ChairController::class, 'deleteChair']);
 
-    Route::post('/logout',  [UserController::class, 'logout']);
+    Route::get('/logout',  [UserController::class, 'logout']);
 
 });
