@@ -24,9 +24,5 @@
 <body>
     @include('components.navbar')
     @yield('main')
-
-    <div id="modelbox" class="d-none">
-        @include('components.modelbox')
-    </div>
 </body>
 </html>

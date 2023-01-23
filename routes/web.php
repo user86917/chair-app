@@ -30,13 +30,13 @@ Route::group(['middleware' => ['auth']], function() {
 
     Route::get('/chair/{slug}', [ChairController::class, 'show']);
 
-    Route::get('/chair/create', [ChairController::class, 'createForm']);
+    Route::get('/chairs/create', [ChairController::class, 'createForm']);
     Route::post('/createChair', [ChairController::class, 'createChair'])->name('createChair');
 
-    Route::get('/chair/update', [ChairController::class, 'updateForm']);
+    Route::get('/chair/update/{slug}', [ChairController::class, 'updateForm']);
     Route::post('/updateChair', [ChairController::class, 'updateChair'])->name('updateChair');
 
-    Route::post('/chair/delete', [ChairController::class, 'deleteChair']);
+    Route::get('/chair/delete/{slug}', [ChairController::class, 'deleteChair']);
 
     Route::get('/logout',  [UserController::class, 'logout']);
 
