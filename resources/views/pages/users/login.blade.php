@@ -1,7 +1,13 @@
 @extends('layout')
 @section('main')
+
+<div class="right_input bg-primary" >
+    {{-- bg-light --}}
+    <h1>ChairFinder</h1>
+    <hr style="width:50%;text-align:left;margin-left:0 bg-dark">
+
     @include('components.loginform')
-    <p>Don't have an account? <a href="/register">Register here</a></p>
+    <p class="text-dark">Don't have an account? <a href="/register" class="text-dark">Register here</a></p>
     
     @if ($errors->any() || session()->has('message'))
     <div class="text-danger">
@@ -13,4 +19,6 @@
         </ul>
     </div>
     @endif
+</div>
+<div class="left-img bg-primary"></div>
 @endsection

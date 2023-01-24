@@ -20,8 +20,10 @@
     <!-- Js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
+
+    
 </head>
-<body>
+<body class="bg-info" >
     @include('components.navbar')
     @yield('main')
 </body>
