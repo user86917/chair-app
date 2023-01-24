@@ -1,7 +1,7 @@
 @extends('layout')
 @section('main')
 
-<div class="right_input bg-primary" >
+<div class="right_input bg-white" >
     {{-- bg-light --}}
     <h1>ChairFinder</h1>
     <hr style="width:50%;text-align:left;margin-left:0 bg-dark">

@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 body {
   position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #ffffff;
 }
 
 body .right_input {
@@ -50,5 +54,92 @@ body .left-img {
 
 body .left-img image {
   overflow: hidden;
+}
+
+body .home_dex {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+body .home_dex header {
+  margin-top: 0;
+  width: 94%;
+  -webkit-clip-path: polygon(0 0, 79% 0, 93% 100%, 0% 100%);
+          clip-path: polygon(0 0, 79% 0, 93% 100%, 0% 100%);
+  margin-left: 5%;
+}
+
+body .home_dex header h1 {
+  font-family: 'Righteous', cursive;
+}
+
+body .home_dex .entree_welkom {
+  width: 95%;
+  height: 150px;
+  margin-left: 5%;
+  font-family: 'Righteous', cursive;
+  -webkit-clip-path: polygon(0 0, 26% 0, 37% 100%, 0% 100%);
+          clip-path: polygon(0 0, 26% 0, 37% 100%, 0% 100%);
+  border-radius: 5px;
+  float: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .home_dex .entree_info {
+  width: 95%;
+  margin-left: 5%;
+  font-family: 'Righteous', cursive;
+  -webkit-clip-path: polygon(0 0, 39% 0, 53% 100%, 0% 100%);
+          clip-path: polygon(0 0, 39% 0, 53% 100%, 0% 100%);
+  border-radius: 5px;
+  float: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .home_dex .entree_toevoegen {
+  width: 95%;
+  margin-left: 5%;
+  font-family: 'Righteous', cursive;
+  -webkit-clip-path: polygon(0 0, 54% 0, 65% 100%, 0% 100%);
+          clip-path: polygon(0 0, 54% 0, 65% 100%, 0% 100%);
+  border-radius: 5px;
+  float: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .home_dex .entree_toevoegen h3 {
+  float: left;
+  padding-right: 10%;
+}
+
+body .home_dex .entree_toevoegen button {
+  padding: 0.7%;
+  border-color: rgba(240, 248, 255, 0);
+  -webkit-clip-path: polygon(0 0, 68% 0, 96% 100%, 0% 100%);
+          clip-path: polygon(0 0, 68% 0, 96% 100%, 0% 100%);
+  border-radius: 5px;
+}
+
+body .home_dex .home_img {
+  margin-left: 33%;
+  width: 60%;
+  height: 78vh;
+  z-index: 9999;
+  overflow: hidden;
+  position: absolute;
+  float: right;
+  -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 64% 100%);
+          clip-path: polygon(0% 0, 100% 0, 100% 100%, 64% 100%);
+}
+
+body .inventory {
+  height: 200px;
+  width: 100%;
 }
 /*# sourceMappingURL=app.css.map */
