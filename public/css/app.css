@@ -70,10 +70,15 @@ body .home_dex header {
   -webkit-clip-path: polygon(0 0, 79% 0, 93% 100%, 0% 100%);
           clip-path: polygon(0 0, 79% 0, 93% 100%, 0% 100%);
   margin-left: 5%;
+  border-radius: 0px 0px 0px 5px;
+  margin-bottom: 20px;
 }
 
-body .home_dex header h1 {
+body .home_dex header a {
+  font-size: 52px;
   font-family: 'Righteous', cursive;
+  text-decoration: underline;
+  color: black;
 }
 
 body .home_dex .entree_welkom {
@@ -81,36 +86,35 @@ body .home_dex .entree_welkom {
   height: 150px;
   margin-left: 5%;
   font-family: 'Righteous', cursive;
-  -webkit-clip-path: polygon(0 0, 26% 0, 37% 100%, 0% 100%);
-          clip-path: polygon(0 0, 26% 0, 37% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 25.5% 0, 35.5% 100%, 0% 100%);
+          clip-path: polygon(0 0, 25.5% 0, 35.5% 100%, 0% 100%);
   border-radius: 5px;
+  z-index: 9999;
   float: left;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 body .home_dex .entree_info {
+  margin-top: 4%;
   width: 95%;
   margin-left: 5%;
   font-family: 'Righteous', cursive;
-  -webkit-clip-path: polygon(0 0, 39% 0, 53% 100%, 0% 100%);
-          clip-path: polygon(0 0, 39% 0, 53% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 40% 0, 51.5% 100%, 0% 100%);
+          clip-path: polygon(0 0, 40% 0, 51.5% 100%, 0% 100%);
   border-radius: 5px;
   float: left;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  z-index: 9999;
 }
 
 body .home_dex .entree_toevoegen {
+  margin-top: 4%;
   width: 95%;
   margin-left: 5%;
   font-family: 'Righteous', cursive;
-  -webkit-clip-path: polygon(0 0, 54% 0, 65% 100%, 0% 100%);
-          clip-path: polygon(0 0, 54% 0, 65% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 56% 0, 65.5% 100%, 0% 100%);
+          clip-path: polygon(0 0, 56% 0, 65.5% 100%, 0% 100%);
   border-radius: 5px;
   float: left;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  z-index: 9999;
 }
 
 body .home_dex .entree_toevoegen h3 {
@@ -120,26 +124,72 @@ body .home_dex .entree_toevoegen h3 {
 
 body .home_dex .entree_toevoegen button {
   padding: 0.7%;
+  width: 35%;
   border-color: rgba(240, 248, 255, 0);
-  -webkit-clip-path: polygon(0 0, 68% 0, 96% 100%, 0% 100%);
-          clip-path: polygon(0 0, 68% 0, 96% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 88% 0, 98% 100%, 0% 100%);
+          clip-path: polygon(0 0, 88% 0, 98% 100%, 0% 100%);
   border-radius: 5px;
 }
 
 body .home_dex .home_img {
   margin-left: 33%;
   width: 60%;
-  height: 78vh;
-  z-index: 9999;
+  height: 610px;
   overflow: hidden;
   position: absolute;
   float: right;
-  -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 64% 100%);
-          clip-path: polygon(0% 0, 100% 0, 100% 100%, 64% 100%);
+  -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 62% 100%);
+          clip-path: polygon(0% 0, 100% 0, 100% 100%, 62% 100%);
+  border-radius: 0px 5px 5px 0px;
+  background-image: url(../img/interieur.jpg);
 }
 
 body .inventory {
-  height: 200px;
+  margin-top: 100px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 5%;
+}
+
+body .inventory .stoel1 {
+  width: 20%;
+  background-color: #ffffff;
+  float: left;
+  padding-bottom: 2%;
+  border-radius: 5px;
+}
+
+body .inventory .stoel1 img {
+  border-radius: 5px;
+  margin: 5%;
+  margin-top: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+  height: 200px;
+  -webkit-box-shadow: 5px 5px 10px 5px  #a0a0a073;
+          box-shadow: 5px 5px 10px 5px  #a0a0a073;
+}
+
+body .inventory .stoel1 h4 {
+  margin-left: 3%;
+}
+
+body .inventory .stoel1 p {
+  margin-left: 3%;
+}
+
+body .inventory .stoel1 button {
+  border-radius: 5px;
+  margin-left: 15%;
+  -webkit-box-shadow: 5px 5px 5px #a0a0a073;
+          box-shadow: 5px 5px 5px #a0a0a073;
+  border: 0px;
 }
 /*# sourceMappingURL=app.css.map */

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
+$white : #ffffff;
 
 body{
    position: relative; 
@@ -79,41 +80,57 @@ float: right;
             width: 94%;
             clip-path: polygon(0 0, 79% 0, 93% 100%, 0% 100%);
             margin-left: 5%;
+            border-radius: 0px 0px 0px 5px;
+            margin-bottom: 20px;
            
-            h1{
+            a{
+                font-size: 52px;
                 font-family: 'Righteous', cursive;
+                text-decoration: underline;
+                color: black;
             }
         
         }
         .entree_welkom{
+          
             width: 95%;
             height: 150px;
             margin-left: 5%;
             font-family: 'Righteous', cursive;
-            clip-path: polygon(0 0, 26% 0, 37% 100%, 0% 100%);
+            clip-path: polygon(0 0, 25.5% 0, 35.5% 100%, 0% 100%);
             border-radius: 5px;
+            z-index: 9999;
             float: left;
-            flex-wrap: wrap;
+            //flex-wrap: wrap;
+            //position: absolute;
             
         }
         .entree_info{
+            margin-top: 4%;
             width: 95%;
             //height: 150px;
             margin-left: 5%;
             font-family: 'Righteous', cursive;
-            clip-path: polygon(0 0, 39% 0, 53% 100%, 0% 100%);
+            clip-path: polygon(0 0, 40% 0, 51.5% 100%, 0% 100%);
             border-radius: 5px;
             float: left;
-            flex-wrap: wrap;
+            z-index: 9999;
+            // flex-wrap: wrap;
+            //position: absolute;
         }
         .entree_toevoegen{
+            margin-top: 4%;
             width: 95%;
             margin-left: 5%;
             font-family: 'Righteous', cursive;
-            clip-path: polygon(0 0, 54% 0, 65% 100%, 0% 100%);
+            clip-path: polygon(0 0, 56% 0, 65.5% 100%, 0% 100%);
             border-radius: 5px;
             float: left;
-            flex-wrap: wrap;
+            z-index: 9999;
+            //flex-wrap: wrap;
+            //position: absolute;
+           
+            
             
             h3{
                 float: left;
@@ -121,32 +138,79 @@ float: right;
             }
             button{
                 padding: 0.7%;
+               width: 35%;
                 border-color: rgba(240, 248, 255, 0);
-                clip-path: polygon(0 0, 68% 0, 96% 100%, 0% 100%);
+                clip-path: polygon(0 0, 88% 0, 98% 100%, 0% 100%);
                 border-radius: 5px;
                 
 
             }
 
+
         }
+       
         .home_img{
+           
           margin-left:33%;
           width: 60%;
-          height: 78vh;
-          z-index: 9999;
+          height: 610px;
+          
           overflow: hidden;
           position:absolute;
           float: right;
-          clip-path: polygon(0% 0, 100% 0, 100% 100%, 64% 100%);
+          clip-path: polygon(0% 0, 100% 0, 100% 100%, 62% 100%);
+          border-radius: 0px 5px 5px 0px;
+          background-image: url(../img/interieur.jpg );
+          
 
 
         }
 
        
     }
+
     .inventory{
-        height: 200px;
+        margin-top: 100px;
+        
         width: 100%;
+         display: flex;
+           justify-content: center;
+           flex-wrap: wrap;
+           padding-bottom: 5%;
+
+
+        .stoel1 {
+            
+            width: 20%;
+            background-color: $white;
+            float: left;
+            padding-bottom: 2%;
+            border-radius: 5px;
+         
+            img{
+                border-radius: 5px;
+                margin: 5%;
+                margin-top: 5%;
+                margin-left:20%;
+               margin-right: 20%;
+                
+                //width: 200px;
+                height: 200px;
+                box-shadow: 5px 5px 10px 5px  #a0a0a073 ;
+            }
+            h4{
+                margin-left: 3%;
+            }
+            p{
+                margin-left: 3%;
+            }
+            button{
+                border-radius: 5px;
+                margin-left: 15%;
+                box-shadow:5px 5px 5px #a0a0a073 ;
+                border: 0px;
+            }
+        }
     }
 
 //}

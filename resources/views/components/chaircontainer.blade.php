@@ -1,7 +1,7 @@
-<div id="chaircontainer" class="container mt-3">
-    <div class="d-flex flex-wrap justify-content-start align-items-center">
+<div class="inventory mt-4 bg-info">
+    @for ($i = 0; $i < 20; $i++)
         @foreach ($items as $item)
             @include('components.chairitem')
         @endforeach
-    </div>
+    @endfor
 </div>
